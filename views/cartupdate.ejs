@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2>SabjiCart.in</h2>
+	<h3>Please fill the below form:</h3>
+	<hr>
+<form id="myForm" >
+    <label for="name">1. First Name</label> <input name="fname" type="text" value="<%=cart.fname%>" /> 
+    -----<label for="lname">Last Name</label> <input name="lname" type="text" value="<%=cart.lname%>" />
+     <br /> <label for="email">2. E-MAIL</label> <input name="email" type="text" value="<%=cart.email%>" />
+      <br /> <label for="phonenum">3. PHONE NUMBER</label> <input name="phonenum" type="text" value="<%=cart.phonenum%>" /> 
+      <br /> <label for="farmeradd">4. Farmer Adderss</label> <br>
+      <label for="streetline1"> STREET LINE1</label> <input name="streetline1" type="text" value="<%=cart.streetline1%>" /> 
+      <label for="streetline2"> STREET LINE2</label> <input name="streetline2" type="text" value="<%=cart.streetline2%>" /> <br />
+       <label for="city">CITY</label> <input name="city" type="text" value="<%=cart.city%>" />---- 
+       <label for="state">STATE</label> <input name="state" type="text" value="<%=cart.state%>" />---- 
+       <label for="pincode">PIN CODE</label> <input name="pincode" type="text" value="<%=cart.pincode%>" /> <br />
+        <label for="familysize">5.FAMILY SIZE</label>
+         <label for="noofdependents">A. NO. OF DEPENDENTS</label>
+          <label for="children">(i) CHILDERN</label>:<input name="noofchildren" type="text" value="<%=cart.noofchildren%>" /> <br />
+           <label for="adults">(ii) ADULTS</label>:<input name="adults" type="text" value="<%=cart.adults%>" /> <br />
+            <label for="noofdependents">A. EARNING MEMBERS</label> :<input name="earningmembers" type="text" value="<%=cart.earningmembers%>" /> 
+            <label for="landsizecultivation">6.LAND SIZE(CULTIVATION)</label> ---
+            <label for="hectare">HECTARE</label> <input name="lsc_hectare" type="text" value="<%=cart.lsc_hectare%>" />---
+             <label for="acre">ACRE</label> <input name="lsc_acre" type="text" value="<%=cart.lsc_acre%>" /> <br /> 
+             <label for="landsizeown">7.LAND SIZE(CULTIVATION)</label> <input name="lso_hectare" type="text" value="<%=cart.lso_hectare%>" />---
+              <label for="acre">ACRE</label> <input name="lso_acre" type="text" value="<%=cart.lso_acre%>" />
+	  
+              <h3>8. CROPS( KHARIF )</h3>     
+              <table>
+                  <tbody>
+                  <tr>
+                  <th>&nbsp;</th>
+                  <th>CROP1</th>
+                  <th>VARIETY</th>
+                  <th>YIELD</th>
+                  <th>CROP2</th>
+                  <th>VARIETY</th>
+                  <th>YIELD</th>
+                  <th>CROP3</th>
+                  <th>VARIETY</th>
+                  <th>YIELD</th>
+                  </tr>
+                  <tr>
+                  <th>FIELD CROP</th>
+                  <%cart.k_fieldcrop_.forEach(val=>{%>
+                    <td><input name=k_fieldcrop_ type="text" value="<%=val%>" /></td>
+                    <%})%>
+                  </tr>
+                  <tr>
+                  <th>HORTICULTURE CROP</th>
+                  <%cart.k_horticulturecrop_.forEach(val=>{%>
+                    <td><input name=k_horticulturecrop_ type="text" value="<%=val%>" /></td>
+                    <%})%></tr>
+                  <tr>
+                  <th>FODDER CROP</th>
+                  <%cart.k_foddercrop_.forEach(val=>{%>
+                    <td><input name=k_foddercrop_ type="text" value="<%=val%>" /></td>
+                    <%})%></tr>
+                  <tr>
+                  <th>FLOWER CROP</th>
+                  <%cart.k_flowercrop_.forEach(val=>{%>
+                    <td><input name=k_flowercrop_ type="text" value="<%=val%>" /></td>
+                    <%})%></tr>
+                  <tr>
+                  <th>AGRO FORESTRY</th>
+                  <%cart.k_agroforestry_.forEach(val=>{%>
+                    <td><input name=k_agroforestry_ type="text" value="<%=val%>" /></td>
+                    <%})%></tr>
+                  </tbody>
+                  </table>
+                  <!-- DivTable.com -->
+                  <p>&nbsp;</p>	</table>
+              
+              
+              <!-- DivTable.com -->
+              <p>&nbsp;</p>
+              <h3>8. CROPS( RABI )</h3>
+              <table>
+                  <tbody>
+                  <tr>
+                  <th>&nbsp;</th>
+                  <th>CROP1</th>
+                  <th>VARIETY</th>
+                  <th>YIELD</th>
+                  <th>CROP2</th>
+                  <th>VARIETY</th>
+                  <th>YIELD</th>
+                  <th>CROP3</th>
+                  <th>VARIETY</th>
+                  <th>YIELD</th>
+                  </tr>
+                  <tr>
+                    <th>FIELD CROP</th>
+                    <%cart.r_fieldcrop_.forEach(val=>{%>
+                      <td><input name=r_fieldcrop_ type="text" value="<%=val%>" /></td>
+                      <%})%>
+                    </tr>
+                    <tr>
+                    <th>HORTICULTURE CROP</th>
+                    <%cart.r_horticulturecrop_.forEach(val=>{%>
+                      <td><input name=r_horticulturecrop_ type="text" value="<%=val%>" /></td>
+                      <%})%></tr>
+                    <tr>
+                    <th>FODDER CROP</th>
+                    <%cart.r_foddercrop_.forEach(val=>{%>
+                      <td><input name=r_foddercrop_ type="text" value="<%=val%>" /></td>
+                      <%})%></tr>
+                    <tr>
+                    <th>FLOWER CROP</th>
+                    <%cart.r_flowercrop_.forEach(val=>{%>
+                      <td><input name=r_flowercrop_ type="text" value="<%=val%>" /></td>
+                      <%})%></tr>
+                    <tr>
+                    <th>AGRO FORESTRY</th>
+                    <%cart.r_agroforestry_.forEach(val=>{%>
+                      <td><input name=r_agroforestry_ type="text" value="<%=val%>" /></td>
+                      <%})%></tr>
+                    </tbody>
+                      </table>		<!-- DivTable.com -->
+                  <p>&nbsp;</p>
+              <p>&nbsp;</p>
+          </form>
+	<button onclick="letsupdate(this)">Update</button>
+	<button type="reset">Reset</button>
+	<p>&nbsp;</p>
+</form>
+<body>
+    <script>
+        function letsupdate(element)
+        {
+            let myForm = element.parentElement
+            console.log(myForm);
+            
+let formData = new FormData(myForm);
+            fetch('/update/<%=cart.id%>',{
+                method:'PUT',
+                body:formData
+            })
+            .then(result=>console.log("Its Done"))
+            .catch(err=>console.log(err));
+        }
+    </script>
+	</html>

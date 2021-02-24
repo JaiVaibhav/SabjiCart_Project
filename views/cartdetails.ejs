@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2>SabjiCart.in</h2>
+	<h3>Details</h3>
+	<hr>
+<form action="/cartcreate" ><label for="fname">1. First Name :<%=cart.fname%> </label>
+    <label for="lname">Last Name : <%=cart.lname%></label> <br /> 
+    <label for="email">2. E-MAIL:<%=cart.email%></label> <br /> 
+    <label for="phonenum">3. PHONE NUMBER:<%=cart.phonenum%></label> <br /> 
+    <label for="farmeradd">4. Farmer Adderss</label> 
+    <br><label for="streetline1"> STREET LINE1:<%=cart.streetline1%></label>  <br>
+    <label for="streetline2"> STREET LINE2:<%=cart.streetline2%></label> <br/>
+     <label for="city">CITY:<%=cart.city%></label> <br>
+     <label for="state">STATE:<%=cart.state%></label><br>
+      <label for="pincode">PIN CODE:<%=cart.pincode%></label>  <br />
+       <label for="familysize">5.FAMILY SIZE</label> <br>
+       <label for="noofdependents">A. NO. OF DEPENDENTS</label><br> 
+       <label for="children">(i) CHILDERN:<%=cart.noofchildren%></label> <br /> 
+       <label for="adults">(ii) ADULTS:<%=cart.noofadults%></label> <br /> 
+       <label for="noofdependents">A. EARNING MEMBERS:<%=cart.earningmembers%></label> <br>
+        <label for="landsizecultivation">6.LAND SIZE(CULTIVATION)</label>
+        <label for="hectare">HECTARE:<%=cart.lsc_hectare%></label> 
+         <label for="acre">ACRE:<%=cart.lsc_acre%></label> <br /> 
+         <label for="landsizeown">7.LAND SIZE(CULTIVATION)</label>
+         <label for="hectare">HECTARE:<%=cart.lso_hectare%></label>
+          <label for="acre">ACRE:<%=cart.lso_acre%></label>
+         
+         
+          <h3>8. CROPS( KHARIF )</h3>     
+	<table>
+		<tbody>
+		<tr>
+		<th>&nbsp;</th>
+		<th>CROP1</th>
+		<th>VARIETY</th>
+		<th>YIELD</th>
+		<th>CROP2</th>
+		<th>VARIETY</th>
+		<th>YIELD</th>
+		<th>CROP3</th>
+		<th>VARIETY</th>
+		<th>YIELD</th>
+		</tr>
+		<tr>
+        <th>FIELD CROP</th>
+        <%cart.k_fieldcrop_.forEach(val=>{%>
+           <td> <%=val%></td>
+        <%})%>
+		</tr>
+		<tr>
+		<th>HORTICULTURE CROP</th>
+        <%cart.k_horticulturecrop_.forEach(val=>{%>
+            <td> <%=val%></td>
+         <%})%></tr>
+		<tr>
+		<th>FODDER CROP</th>
+        <%cart.k_foddercrop_.forEach(val=>{%>
+            <td> <%=val%></td>
+         <%})%></tr>
+		<tr>
+		<th>FLOWER CROP</th>
+        <%cart.k_flowercrop_.forEach(val=>{%>
+            <td> <%=val%></td>
+         <%})%></tr>
+		<tr>
+		<th>AGRO FORESTRY</th>
+        <%cart.k_agroforestry_.forEach(val=>{%>
+            <td> <%=val%></td>
+         <%})%></tr>
+		</tbody>
+		</table>
+		<!-- DivTable.com -->
+		<p>&nbsp;</p>	</table>
+	
+	
+	<!-- DivTable.com -->
+	<p>&nbsp;</p>
+	<h3>8. CROPS( RABI )</h3>
+	<table>
+		<tbody>
+		<tr>
+		<th>&nbsp;</th>
+		<th>CROP1</th>
+		<th>VARIETY</th>
+		<th>YIELD</th>
+		<th>CROP2</th>
+		<th>VARIETY</th>
+		<th>YIELD</th>
+		<th>CROP3</th>
+		<th>VARIETY</th>
+		<th>YIELD</th>
+		</tr>
+		<tr>
+            <th>FIELD CROP</th>
+            <%cart.r_fieldcrop_.forEach(val=>{%>
+               <td> <%=val%></td>
+            <%})%>
+            </tr>
+            <tr>
+            <th>HORTICULTURE CROP</th>
+            <%cart.r_horticulturecrop_.forEach(val=>{%>
+                <td> <%=val%></td>
+             <%})%></tr>
+            <tr>
+            <th>FODDER CROP</th>
+            <%cart.r_foddercrop_.forEach(val=>{%>
+                <td> <%=val%></td>
+             <%})%></tr>
+            <tr>
+            <th>FLOWER CROP</th>
+            <%cart.r_flowercrop_.forEach(val=>{%>
+                <td> <%=val%></td>
+             <%})%></tr>
+            <tr>
+            <th>AGRO FORESTRY</th>
+            <%cart.r_agroforestry_.forEach(val=>{%>
+                <td> <%=val%></td>
+             <%})%></tr>
+            </tbody>
+            </table>		<!-- DivTable.com -->
+		<p>&nbsp;</p>
+	<p>&nbsp;</p>
+</form>
+<a>Update</a>
+<a onclick="letsdelete(this)" href="#" data-doc="<%=cart.id%>">Delete</a>
+ </div>
+<body>
+    <div>
+       
+       
+         <script>
+            function letsdelete(element)
+            {
+                if(window.prompt("Are you sure you want to delete")=='yes')
+                {
+                const hhref=`/cartdelete/${element.dataset.doc}`;
+                console.log(element.dataset.doc);
+                fetch(hhref,{
+                    method:'DELETE'
+                })
+                .then(res=>res.json())
+                .then(data=>window.location.href=data.redirect)
+                //.then(result=>element.parentElement.remove())
+                .catch(err=>console.log(err));
+            }
+            }
+        </script>
+        
+	</html>
+       

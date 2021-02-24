@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li><a href="/">All Carts</a></li>
+        <li><a href="/cartcreate">Create Cart</a></li>
+    </ul>
+
+    <div class="cartlist">
+        <% if(carts.length>0){ %>
+         <% carts.forEach(cart=>{ %>
+            <div>
+           <label><%= cart.fname %></label>
+           <label><%= cart.lname %></label>
+           <label><%= cart.email %></label>
+           <a href="/cartdetails/<%=cart.id%> ">View</a>
+           <a href='/cartupdate/<%=cart.id%>'>Update</a>
+           <a onclick="letsdelete(this)" href="#" data-doc="<%=cart.id%>">Delete</a>
+            </div>
+           
+            <%});} else{%>
+            <%="No carts Available" %>
+            <%}%>
+
+    </div>
+</body>
+<script>
+    function letsdelete(element)
+    {
+        if(window.prompt("Are you sure you want to delete")=='yes')
+                {
+        const hhref=`/cartdelete/${element.dataset.doc}`;
+        console.log(element.dataset.doc);
+        fetch(hhref,{
+            method:'DELETE'
+        })
+        //.then(res=>res.json())
+        //.then(data=>window.location.href=data.redirect)
+        .then(result=>element.parentElement.remove())
+        .catch(err=>console.log(err));
+    }
+    }
+</script>
+</html>

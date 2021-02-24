@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2>SabjiCart.in</h2>
+	<h3>Please fill the below form:</h3>
+	<hr>
+<form action="/cartcreate" method="POST"  ><label for="name">1. First Name</label> <input name="fname" type="text" value="" /> -----<label for="lname">Last Name</label> <input name="lname" type="text" value="" /> <br /> <label for="email">2. E-MAIL</label> <input name="email" type="text" value="" /> <br /> <label for="phonenum">3. PHONE NUMBER</label> <input name="phonenum" type="text" value="" /> <br /> <label for="farmeradd">4. Farmer Adderss</label> <label for="streetline1"> STREET LINE1</label> <input name="streetline1" type="text" value="" /> <label for="streetline2"> STREET LINE2</label> <input name="streetline2" type="text" value="" /> <br /> <label for="city">CITY</label> <input name="city" type="text" value="" />---- <label for="state">STATE</label> <input name="state" type="text" value="" />---- <label for="pincode">PIN CODE</label> <input name="pincode" type="text" value="" /> <br /> <label for="familysize">5.FAMILY SIZE</label> <label for="noofdependents">A. NO. OF DEPENDENTS</label> <label for="children">(i) CHILDERN</label>:<input name="noofchildren" type="text" value="" /> <br /> <label for="adults">(ii) ADULTS</label>:<input name="adults" type="text" value="" /> <br /> <label for="noofdependents">A. EARNING MEMBERS</label> :<input name="earningmembers" type="text" value="" /> <label for="landsizecultivation">6.LAND SIZE(CULTIVATION)</label> ---<label for="hectare">HECTARE</label> <input name="lsc_hectare" type="text" value="" />--- <label for="acre">ACRE</label> <input name="lsc_acre" type="text" value="" /> <br /> <label for="landsizeown">7.LAND SIZE(CULTIVATION)</label> <input name="lso_hectare" type="text" value="" />--- <label for="acre">ACRE</label> <input name="lso_acre" type="text" value="" />
+	<h3>8. CROPS( KHARIF )</h3>
+	<table>
+		<tbody>
+		<tr>
+		<th>&nbsp;</th>
+		<th>CROP1</th>
+		<th>VARIETY</th>
+		<th>YIELD</th>
+		<th>CROP2</th>
+		<th>VARIETY</th>
+		<th>YIELD</th>
+		<th>CROP3</th>
+		<th>VARIETY</th>
+		<th>YIELD</th>
+		</tr>
+		<tr>
+		<th>FIELD CROP</th>
+		<td><input name=k_fieldcrop_ type="text" value="" /></td>
+		<td><input name=k_fieldcrop_ type="text" value="" /></td>
+		<td><input name=k_fieldcrop_ type="text" value="" /></td>
+		<td><input name=k_fieldcrop_ type="text" value="" /></td>
+		<td><input name=k_fieldcrop_ type="text" value="" /></td>
+		<td><input name=k_fieldcrop_ type="text" value="" /></td>
+		<td><input name=k_fieldcrop_ type="text" value="" /></td>
+		<td><input name=k_fieldcrop_ type="text" value="" /></td>
+		<td><input name=k_fieldcrop_ type="text" value="" /></td>
+		</tr>
+		<tr>
+		<th>HORTICULTURE CROP</th>
+		<td><input name=k_horticulturecrop_ type="text" value="" /></td>
+		<td><input name=k_horticulturecrop_ type="text" value="" /></td>
+		<td><input name=k_horticulturecrop_ type="text" value="" /></td>
+		<td><input name=k_horticulturecrop_ type="text" value="" /></td>
+		<td><input name=k_horticulturecrop_ type="text" value="" /></td>
+		<td><input name=k_horticulturecrop_ type="text" value="" /></td>
+		<td><input name=k_horticulturecrop_ type="text" value="" /></td>
+		<td><input name=k_horticulturecrop_ type="text" value="" /></td>
+		<td><input name=k_horticulturecrop_ type="text" value="" /></td>
+		</tr>
+		<tr>
+		<th>FODDER CROP</th>
+		<td><input name=k_foddercrop_ type="text" value="" /></td>
+		<td><input name=k_foddercrop_ type="text" value="" /></td>
+		<td><input name=k_foddercrop_ type="text" value="" /></td>
+		<td><input name=k_foddercrop_ type="text" value="" /></td>
+		<td><input name=k_foddercrop_ type="text" value="" /></td>
+		<td><input name=k_foddercrop_ type="text" value="" /></td>
+		<td><input name=k_foddercrop_ type="text" value="" /></td>
+		<td><input name=k_foddercrop_ type="text" value="" /></td>
+		<td><input name=k_foddercrop_ type="text" value="" /></td>
+		</tr>
+		<tr>
+		<th>FLOWER CROP</th>
+		<td><input name=k_flowercrop_ type="text" value="" /></td>
+		<td><input name=k_flowercrop_ type="text" value="" /></td>
+		<td><input name=k_flowercrop_ type="text" value="" /></td>
+		<td><input name=k_flowercrop_ type="text" value="" /></td>
+		<td><input name=k_flowercrop_ type="text" value="" /></td>
+		<td><input name=k_flowercrop_ type="text" value="" /></td>
+		<td><input name=k_flowercrop_ type="text" value="" /></td>
+		<td><input name=k_flowercrop_ type="text" value="" /></td>
+		<td><input name=k_flowercrop_ type="text" value="" /></td>
+		</tr>
+		<tr>
+		<th>AGRO FORESTRY</th>
+		<td><input name=k_agroforestry_ type="text" value="" /></td>
+		<td><input name=k_agroforestry_ type="text" value="" /></td>
+		<td><input name=k_agroforestry_ type="text" value="" /></td>
+		<td><input name=k_agroforestry_ type="text" value="" /></td>
+		<td><input name=k_agroforestry_ type="text" value="" /></td>
+		<td><input name=k_agroforestry_ type="text" value="" /></td>
+		<td><input name=k_agroforestry_ type="text" value="" /></td>
+		<td><input name=k_agroforestry_ type="text" value="" /></td>
+		<td><input name=k_agroforestry_ type="text" value="" /></td>
+		</tr>
+		</tbody>
+		</table>
+		<!-- DivTable.com -->
+		<p>&nbsp;</p>	</table>
+	
+	
+	<!-- DivTable.com -->
+	<p>&nbsp;</p>
+	<h3>8. CROPS( RABI )</h3>
+	<table>
+		<tbody>
+		<tr>
+		<th>&nbsp;</th>
+		<th>CROP1</th>
+		<th>VARIETY</th>
+		<th>YIELD</th>
+		<th>CROP2</th>
+		<th>VARIETY</th>
+		<th>YIELD</th>
+		<th>CROP3</th>
+		<th>VARIETY</th>
+		<th>YIELD</th>
+		</tr>
+		<tr>
+		<th>FIELD CROP</th>
+		<td><input name=r_fieldcrop_ type="text" value="" /></td>
+		<td><input name=r_fieldcrop_ type="text" value="" /></td>
+		<td><input name=r_fieldcrop_ type="text" value="" /></td>
+		<td><input name=r_fieldcrop_ type="text" value="" /></td>
+		<td><input name=r_fieldcrop_ type="text" value="" /></td>
+		<td><input name=r_fieldcrop_ type="text" value="" /></td>
+		<td><input name=r_fieldcrop_ type="text" value="" /></td>
+		<td><input name=r_fieldcrop_ type="text" value="" /></td>
+		<td><input name=r_fieldcrop_ type="text" value="" /></td>
+		</tr>
+		<tr>
+		<th>HORTICULTURE CROP</th>
+		<td><input name=r_horticulturecrop_ type="text" value="" /></td>
+		<td><input name=r_horticulturecrop_ type="text" value="" /></td>
+		<td><input name=r_horticulturecrop_ type="text" value="" /></td>
+		<td><input name=r_horticulturecrop_ type="text" value="" /></td>
+		<td><input name=r_horticulturecrop_ type="text" value="" /></td>
+		<td><input name=r_horticulturecrop_ type="text" value="" /></td>
+		<td><input name=r_horticulturecrop_ type="text" value="" /></td>
+		<td><input name=r_horticulturecrop_ type="text" value="" /></td>
+		<td><input name=r_horticulturecrop_ type="text" value="" /></td>
+		</tr>
+		<tr>
+		<th>FODDER CROP</th>
+		<td><input name=r_foddercrop_ type="text" value="" /></td>
+		<td><input name=r_foddercrop_ type="text" value="" /></td>
+		<td><input name=r_foddercrop_ type="text" value="" /></td>
+		<td><input name=r_foddercrop_ type="text" value="" /></td>
+		<td><input name=r_foddercrop_ type="text" value="" /></td>
+		<td><input name=r_foddercrop_ type="text" value="" /></td>
+		<td><input name=r_foddercrop_ type="text" value="" /></td>
+		<td><input name=r_foddercrop_ type="text" value="" /></td>
+		<td><input name=r_foddercrop_ type="text" value="" /></td>
+		</tr>
+		<tr>
+		<th>FLOWER CROP</th>
+		<td><input name=r_flowercrop_ type="text" value="" /></td>
+		<td><input name=r_flowercrop_ type="text" value="" /></td>
+		<td><input name=r_flowercrop_ type="text" value="" /></td>
+		<td><input name=r_flowercrop_ type="text" value="" /></td>
+		<td><input name=r_flowercrop_ type="text" value="" /></td>
+		<td><input name=r_flowercrop_ type="text" value="" /></td>
+		<td><input name=r_flowercrop_ type="text" value="" /></td>
+		<td><input name=r_flowercrop_ type="text" value="" /></td>
+		<td><input name=r_flowercrop_ type="text" value="" /></td>
+		</tr>
+		<tr>
+		<th>AGRO FORESTRY</th>
+		<td><input name=r_agroforestry_ type="text" value="" /></td>
+		<td><input name=r_agroforestry_ type="text" value="" /></td>
+		<td><input name=r_agroforestry_ type="text" value="" /></td>
+		<td><input name=r_agroforestry_ type="text" value="" /></td>
+		<td><input name=r_agroforestry_ type="text" value="" /></td>
+		<td><input name=r_agroforestry_ type="text" value="" /></td>
+		<td><input name=r_agroforestry_ type="text" value="" /></td>
+		<td><input name=r_agroforestry_ type="text" value="" /></td>
+		<td><input name=r_agroforestry_ type="text" value="" /></td>
+		</tr>
+		</tbody>
+		</table>
+		<!-- DivTable.com -->
+		<p>&nbsp;</p>
+	<button type="submit">Submit</button>
+	<button type="reset">Reset</button>
+	<p>&nbsp;</p>
+</form>
+<body>
+	</html>
